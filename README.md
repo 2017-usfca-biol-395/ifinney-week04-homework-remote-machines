@@ -23,7 +23,7 @@ Steps:
 4. Clone your fork of the assignment repository down to the server.
 5. Go into the assignment directory from the command line.
 6. Make a `data` directory in your project folder. Copy (using `cp`) the zipped fasta files from the existing data directory into the one you just created. Completing this step before you start working with the data files will allow you to get them back (copy them again) if you accidentally delete them or otherwise mess them up (it happens to all of us...). Also note that I added this data folder to the `.gitignore` file, so you shouldn't have to worry about git asking if you want to track it. *This data folder should never be commited or pushed to GitHub.*
-6. Write a bash script, using nano, named `fasta_QC_checks.sh`. It should produce a set of summary information about each of the fasta files in the directory. You may want to split your tmux window vertically to have both nano and a bash prompt open at once while you work on this.
+7. Write a bash script, using nano, named `fasta_QC_checks.sh`. It should produce a set of summary information about each of the fasta files in the directory. You may want to split your tmux window vertically to have both nano and a bash prompt open at once while you work on this.
   * Each fasta file is zipped individually. You will need to decompress each of them before you can process them.
   * The first lines of output should say that this is a log file, and include today's date. The date should be generated dynamically (use the `date` command). For everything else in this preamble you can just use `echo`.
   * Then, you should loop over all of the fasta files, producing a set of summary output. The output you should produce about each of the fasta files include: its name, its size in human readable units (hint: I think `ls` and `cut` will work for this), the first three lines, the last three lines, the number of sequences in the file, and the sequence identifier lines in the file, sorted alphabetically.
@@ -72,14 +72,14 @@ etc etc
 
 ```
 
-7. Commit the script as you work on it, whenever you make a good chunk of progress. Make sure you write
+8. Commit the script as you work on it, whenever you make a good chunk of progress. Make sure you write
    an [appropriate commit message](https://chris.beams.io/posts/git-commit/).
-8. After you have finished the script and it successfully runs at the command line, be sure to add a commit marking this milestone (and push back up to GitHub just to be safe!).
-9. Then run the script but redirect the output to a text log file called `2017-09-13_fasta_QC_log.txt` (or whatever the date is when you run it).
-10. Check that it worked as you expect, and if so, add and commit this log output.
-11. Using `nano`, write a short markdown formatted file named `2017-09-13_fasta_QC_notes.md` (changing date as needed depending on when you write it) that contains your brief thoughts (one paragraph max) on the output you produced. Do you notice anything odd or concerning? Think of this as your lab notebook entry.
-12. Add and commit this notes file as well, once you are done.
-13. Your final project folder should look like this:
+9. After you have finished the script and it successfully runs at the command line, be sure to add a commit marking this milestone (and push back up to GitHub just to be safe!).
+10. Then run the script but redirect the output to a text log file called `2017-09-13_fasta_QC_log.txt` (or whatever the date is when you run it).
+11. Check that it worked as you expect, and if so, add and commit this log output.
+12. Using `nano`, write a short markdown formatted file named `2017-09-13_fasta_QC_notes.md` (changing date as needed depending on when you write it) that contains your brief thoughts (one paragraph max) on the output you produced. Do you notice anything odd or concerning? Think of this as your lab notebook entry.
+13. Add and commit this notes file as well, once you are done.
+14. Your final project folder should look like this:
 
 ```
 $ ls -aF naupaka_week04-homework-remote-machines
@@ -92,7 +92,7 @@ fasta_QC_checks.sh
 data/
 ```
 
-14. Once that's all done, add, commit, and push everything back to your fork of the original repository on GitHub with `git push -u origin master`. Remember that you can only push what you have committed, so be sure all of your work is committed. Be sure to save your files often, and check `git status` frequently as you work.
-15. Submit a Pull Request back to the organization repository to submit your assignment. Make sure the Pull Request (PR) has a useful description of the changes you made
+15. Once that's all done, add, commit, and push everything back to your fork of the original repository on GitHub with `git push -u origin master`. Remember that you can only push what you have committed, so be sure all of your work is committed. Be sure to save your files often, and check `git status` frequently as you work.
+16. Submit a Pull Request back to the organization repository to submit your assignment. Make sure the Pull Request (PR) has a useful description of the changes you made
 
 **Pro Tip:** Save often, commit often, push often, and use `tmux`!
