@@ -18,7 +18,7 @@ You must submit your work as a Pull Request to the class organization ('2017-usf
 Steps:
 
 1. Fork this repository to your own GitHub account.
-2. Connect to tule.usfca.edu with `ssh yourusername@tule.usfca.edu -p 600XX` using the username, password, and port (that's the 600XX part of the command) that were emailed to you. You will need to connect to the VPN before you do this if you are off campus.
+2. Connect to tule.usfca.edu with `ssh yourusername@tule.usfca.edu -p 80XX` using the username, password, and port (that's the 80XX part of the command) that were emailed to you. You will need to connect to the VPN before you do this if you are off campus.
 3. Start a new named `tmux` session on the server ([tmux cheat sheet here](https://gist.github.com/MohamedAlaa/2961058)). If you use `ls`, you'll notice that there is already a `data` directory on the server, with some zipped fasta files in it.
 4. Clone your fork of the assignment repository down to the server.
 5. Go into the assignment directory from the command line.
