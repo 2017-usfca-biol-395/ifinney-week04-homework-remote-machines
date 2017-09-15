@@ -1,5 +1,5 @@
 # Working on remote servers homework assignment for BIOL395
-## Due as a pull request on September 18, 2017 before 11:30 am
+## Due as a pull request on September 20, 2017 before 11:30 am
 
 The **goal of this assignment** is to get you to get more practice writing bash scripts on the command line, doing so in the context of a version-controlled workflow, this time entirely on a remote server, and submitting your work as a Pull Request on GitHub.
 
@@ -13,7 +13,7 @@ This second assignment will be worth 20 points. The grading breakdown will be as
 * 5 points - Both scripts are appropriately commented and well organized
 * 5 points - Appropriate use of git to version control the steps, including adding and committing the appropriate files at the specific steps below, and writing informative and appropriately formatted commit messages
 
-You must submit your work as a Pull Request to the class organization ('2017-usfca-biol-395') on GitHub by 11:30 am on Monday, September 18 for full credit. Late assignments will not be accepted, since we will be peer reviewing the code after it is submitted.
+You must submit your work as a Pull Request to the class organization ('2017-usfca-biol-395') on GitHub by 11:30 am on Wednesday, September 20 for full credit. Late assignments will not be accepted, since we will be peer reviewing the code after it is submitted.
 
 Steps:
 
@@ -22,11 +22,11 @@ Steps:
 3. Start a new named `tmux` session on the server ([tmux cheat sheet here](https://gist.github.com/MohamedAlaa/2961058)). You'll notice that there is already a `/data` directory on the server, with some zipped fasta files in it.
 4. Clone your fork of the assignment repository down to the server.
 5. Go into the assignment directory from the command line.
-6. Make a `data` directory in your project folder. Copy (using `cp`) the zipped fasta files from the existing data directory into the one you just created (e.g. `cp /data/* ./data/`). Completing this step before you start working with the data files will allow you to get them back (copy them again) if you accidentally delete them or otherwise mess them up (it happens to all of us...). Also note that I added this data folder to the `.gitignore` file, so you shouldn't have to worry about git asking if you want to track it. *This data folder should never be commited or pushed to GitHub.*
+6. Make a `data` directory in your project folder. Copy (using `cp`) the zipped fasta files from the existing data directory into the one you just created (e.g. `cp /data/* data`). Completing this step before you start working with the data files will allow you to get them back (copy them again) if you accidentally delete them or otherwise mess them up (it happens to all of us...). Also note that I added this data folder to the `.gitignore` file, so you shouldn't have to worry about git asking if you want to track it. *This data folder should never be committed or pushed to GitHub.*
 7. Write a bash script, using nano, named `fasta_QC_checks.sh`. It should produce a set of summary information about each of the fasta files in the directory. You may want to split your tmux window vertically to have both nano and a bash prompt open at once while you work on this.
   * Each fasta file is zipped individually. You will need to decompress each of them before you can process them.
   * The first lines of output should say that this is a log file, and include today's date. The date should be generated dynamically (use the `date` command). For everything else in this preamble you can just use `echo`.
-  * Then, you should loop over all of the fasta files, producing a set of summary output. The output you should produce about each of the fasta files include: its name, its size in human readable units (hint: I think `ls` and `cut` will work for this), the first three lines, the last three lines, the number of sequences in the file, and the sequence identifier lines in the file, sorted alphabetically.
+  * Then, you should loop over all of the fasta files, producing a set of summary output. The output you should produce about each of the fasta files include: its name, its size in human readable units (hint: I think `du` and `cut` will work for this -- check out the help for both of those to figure out what options to use), the first three lines, the last three lines, the number of sequences in the file, and the sequence identifier lines in the file, sorted alphabetically.
   * You should also include a liberal use of echo to add blank lines and seperators to make the output coherant and readable.
 
 ```
