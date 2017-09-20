@@ -1,0 +1,9 @@
+Unzipping fasta files
+Output from preliminary quality control checks on selected fasta files
+2017-09-20 04:02
+ 
+Output for each fasta includes:
+Filename, file size, first three lines, last three lines, the number of sequences in the file, and the sequence identifier lines, sorted alphabetically.
+ 
+#######################################################
+ 
