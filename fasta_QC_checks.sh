@@ -40,14 +40,22 @@ echo " "
 echo "Output for each fasta includes:"
 echo "Filename, file size, first three lines, last three lines, the number of sequences in the file, and the sequence identifier lines, sorted alphabetically."
 echo " "
-echo "#########################################################"
+echo "#######################################################"
 echo " "
 
 # This for loop should give out a set of data pertaining to each file"
+# When running this script use the command 
+# "bash fasta_QC_checks.sh data/*.fasta.zip
 for file in $@
 do
 	echo "Output for $file:"
 	echo " "
+	echo "Size: $(du -hs ${file} |cut -f1)"
+	echo " "
+	echo "#######################################################"
+	echo "First three lines"
+	echo "-----------------"
+
 
 done
 
