@@ -29,5 +29,25 @@
 echo "Unzipping fasta files"
 # This code will output a series of quality checks and information about the fasta files present in data
 
+echo "Output from preliminary quality control checks on selected fasta files"
+date +'%F %H:%M'
+echo " "
 
+#For date command could also use date +'%Y-%m-%d %H:%M'
+# Note: The date that is outputted is incorrect. Can't change due to server 
+#permissions
+
+echo "Output for each fasta includes:"
+echo "Filename, file size, first three lines, last three lines, the number of sequences in the file, and the sequence identifier lines, sorted alphabetically."
+echo " "
+echo "#########################################################"
+echo " "
+
+# This for loop should give out a set of data pertaining to each file"
+for file in $@
+do
+	echo "Output for $file:"
+	echo " "
+
+done
 
