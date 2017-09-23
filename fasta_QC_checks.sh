@@ -43,11 +43,15 @@ do
 	head -3 $file
 	echo " "
 	echo "-----------------"
+	echo " "
 	echo "Last three lines:"
+	echo "-----------------"
 	tail -3 $file
-	echo "Number of sequences: $(grep -c "^" $file)"
+	echo " "
+	echo "-----------------"
+	echo " "
+	echo "Number of sequences: $(grep -c "^>" $file)"
 	echo " "
 	echo "Sequence names(sorted):"
 	grep ">" $file | sort
 done
-
